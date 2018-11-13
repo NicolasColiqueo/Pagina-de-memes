@@ -1,0 +1,33 @@
+header{
+	background-color: black;
+	color: white;
+	height: 1.7em;
+}
+
+h1{
+	font-size: 70px;
+	font-family: 'Bangers', cursive;
+}
+nav{
+	background-color: grey;
+}
+body{
+	background: #FFFDFA;
+	text-align: center;
+}
+img{
+	display: block;
+	margin: left;
+	padding-left: 150px;
+}
+.ir-arriba{
+	display: none;
+	padding: 20px;
+	background: #024562;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
