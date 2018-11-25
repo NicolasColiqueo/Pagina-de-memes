@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Subir imagen</title>
+	<title>Subir archivo</title>
 </head>
 <body>
 	<form action="recibirimagen.php" method="post" enctype="multipart/form-data">
 		<table>
 			<tr>
 				<td>
-					<label for="imagen">Imagen:</label>
+					<label for="archivo">archivo:</label>
 				</td>
 				<td>
-					<input type="file" name="imagen" size="20">
+					<input type="file" name="archivo" size="20">
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="submit" name="Enviar Imagen">
+					<input type="submit" name="Enviar archivo">
 				</td>
 			</tr>
 		</table>		
