@@ -10,9 +10,9 @@
 </head>
 <body>
 	<header>
-		header 
+	<p>NATIONALMEMEGRAPHICS-inf.uct.cl<p>	
 	</header>
-	<h1><SPAN style="color:green">NATIONAL</SPAN><SPAN style="color:#89962B">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1> 
+	<h1><SPAN style="color:black">NATIONAL</SPAN><SPAN style="color:yellow">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1> 
 	<nav>
 		<ul id="nav">
 			<a href="subirimagen.php">SUBIR IMAGENES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -26,7 +26,7 @@
 	<?php
 		$contenido="";
 		$tipo_i="";
-		$conexion = mysqli_connect("localhost","root","","memes");
+		$conexion = mysqli_connect("db.inf.uct.cl","rvallejos","rvallejos3038","rvallejos");
 		if (mysqli_connect_errno()) {
 			echo "Fallo al conectar con BD";
 			exit();

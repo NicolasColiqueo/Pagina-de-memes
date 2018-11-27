@@ -10,7 +10,7 @@ session_start();
 	<title>login</title>
 </head>
 <body >
-    <h1 >Welcome to <SPAN style="color:green">NATIONAL</SPAN><SPAN style="color:#89962B">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1>
+    <h1 >Welcome to <SPAN style="color:black">NATIONAL</SPAN><SPAN style="color:yellow">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1>
 	<h2 align="center"> INGRESA TUS DATOS PARA INICIAR SESIÓN</h2>
 		<form action="validar.php" method="post">
 

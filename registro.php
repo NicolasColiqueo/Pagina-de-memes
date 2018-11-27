@@ -9,7 +9,7 @@
   
 </head>
 <body >
-    <h1 align="center">Welcome to <span style="color:green">NATIONAL</SPAN><SPAN style="color:#89962B">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1>
+    <h1 align="center">Welcome to <span style="color:black">NATIONAL</SPAN><SPAN style="color:yellow">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1>
   <h2>INGRESA TUS DATOS PARA REGISTRARTE</h2>
     
 <form action="ingreso.php" method="post" align="center">

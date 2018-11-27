@@ -1,5 +1,5 @@
 <?php
-	$conexion = mysqli_connect("localhost","root","","memes"); //conecta con la base de datos
+	$conexion = mysqli_connect("db.inf.uct.cl","rvallejos","rvallejos3038","rvallejos"); //conecta con la base de datos
 
 	if (mysqli_connect_errno()) {
 		echo "Fallo al conectar con BD";
@@ -15,7 +15,7 @@
 	$tamaño_v=$_FILES['video']['size'];
 	//MIME
 	if ($tipo_v=="video/mp4" || $tipo_v=="video/ogg" || $tipo_v=="video/webm") {
-			$destino=$_SERVER['DOCUMENT_ROOT'].'/NMG/uploads/'; //Ruta de la carpeta destino en servidor xampp
+			$destino=./uploads/'; //Ruta de la carpeta destino en servidor xampp
 			move_uploaded_file($_FILES['video']['tmp_name'],$destino.$nombre_v); //mover archivo desde directorio temporal a directorio escogido
 			$archivo_objetivo=fopen($destino.$nombre_v, "r");
 			$contenido=fread($archivo_objetivo, $tamaño_v);

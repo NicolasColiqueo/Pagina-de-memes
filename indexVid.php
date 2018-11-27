@@ -10,21 +10,21 @@
 </head>
 <body>
 	<header>
-		
+	 <p>NATIONALMEMEGRAPHICS-inf.uct.cl<p>	
 	</header>
-	<h1><SPAN style="color:green">NATIONAL</SPAN><SPAN style="color:#89962B">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1> 
+	<h1><SPAN style="color:black">NATIONAL</SPAN><SPAN style="color:yellow">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1> 
 	<nav>
 		<ul id="nav">
-			<a href="subirimagen.php">SUBIR IMAGENES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="subirvideo.php">SUBIR VIDEOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="indexVid2.php">VER VIDEOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="index2.php">VER IMAGENES</a>
+			<a href="registro.php">REGISTRO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="login.php">LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="indexVid.php">VER VIDEOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="index.php">VER IMAGENES</a>
 		</ul>
 	</nav>
 	<span class="ir-arriba icon-circle-up"> ARRIBA </span>
 	<section class="contenido">
 	<?php
-		$conexion = mysqli_connect("localhost","root","","memes");
+		$conexion = mysqli_connect("db.inf.uct.cl","rvallejos","rvallejos3038","rvallejos");
 		if (mysqli_connect_errno()) {
 			echo "Fallo al conectar con BD";
 			exit();
