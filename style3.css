@@ -1,0 +1,48 @@
+header{
+	background-color: black;
+	color: white;
+	height: 1.7em;
+}
+
+#nav{
+	padding-bottom: 1em;
+	font-size: medium;
+	font-style: all;
+	text-align: center;
+	padding-top: 1em;
+	color: black;
+	background-color: grey;
+}
+h1{
+	font-size: 70px;
+	font-family: 'Bangers', cursive;
+}
+body{
+	background: #FFFDFA;
+	text-align: center;
+	background: url(https://66.media.tumblr.com/fd1e189d555ec36b07cdaaa288698008/tumblr_phwe5g0Dx41rqxowyo1_400.jpg);
+}
+img{
+	display: block;
+	margin: left;
+	padding-left: 150px;
+}
+.ir-arriba{
+	display: none;
+	padding: 20px;
+	background: #024562;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+div{
+	margin: 1px;
+    padding: 1px;
+    border: 1px;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
