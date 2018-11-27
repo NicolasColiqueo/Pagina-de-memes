@@ -11,12 +11,12 @@
 					<label for="archivo">archivo:</label>
 				</td>
 				<td>
-					<input type="file" name="archivo" size="20">
+					<input type="file" name="archivo">
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="submit" name="Enviar archivo">
+					<input type="submit" name="Enviar imagen">
 				</td>
 			</tr>
 		</table>		

@@ -34,7 +34,7 @@
 
 			mysqli_set_charset($conexion,"utf8");
 
-			$consult="SELECT * FROM imageness";
+			$consult="SELECT * FROM imageness WHERE Tipo_M='image/jpeg'";
 			$result=mysqli_query($conexion, $consult);
 			while($fila=mysqli_fetch_array($result)){
 				$contenido=$fila['Contenido_M'];
@@ -44,5 +44,8 @@
 			}
 		?>
 	</section>
+	<form name="buscador" action="Search.php ">
+<input type="text" name="Etiqueta">
+<button type="submit">Search</button>
 </body>
 </html>

@@ -28,7 +28,7 @@
 				echo "La imagen fue almacenada exitosamente.";
 			}
 			else{
-				echo "No se pudo insertar el archivo";
+				echo "No se pudo insertar la imagen";
 			}
 		}
 	else{

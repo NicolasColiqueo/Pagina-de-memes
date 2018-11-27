@@ -23,25 +23,23 @@
 	</nav>
 	<span class="ir-arriba icon-circle-up"> ARRIBA </span>
 	<section class="contenido">
-		<?php
-			$contenido="";
-			$tipo_i="";
-			$conexion = mysqli_connect("localhost","root","","memes");
-			if (mysqli_connect_errno()) {
-				echo "Fallo al conectar con BD";
-				exit();
+	<?php
+		$contenido="";
+		$tipo_i="";
+		$conexion = mysqli_connect("localhost","root","","memes");
+		if (mysqli_connect_errno()) {
+			echo "Fallo al conectar con BD";
+			exit();
+		}
+		mysqli_set_charset($conexion,"utf8");
+		$consult="SELECT * FROM imageness";
+		$result=mysqli_query($conexion, $consult);
+		while($fila=mysqli_fetch_array($result)){
+			$contenido=$fila['Contenido_M'];
+			$tipo=$fila['Tipo_M'];
+			echo "<img src='data:image/jpeg; base64," . base64_encode($contenido) . "' width='700' height='500'><br>";
 			}
-
-			mysqli_set_charset($conexion,"utf8");
-
-			$consult="SELECT * FROM imageness";
-			$result=mysqli_query($conexion, $consult);
-			while($fila=mysqli_fetch_array($result)){
-				$contenido=$fila['Contenido_M'];
-				$tipo=$fila['Tipo_M'];
-				echo "<img src='data:image/jpeg; base64," . base64_encode($contenido) . "' width='700' height='500'><br>";
-			}
-		?>
-	</section>
+	?>
+</section>
 </body>
 </html>
