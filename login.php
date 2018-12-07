@@ -5,13 +5,11 @@ session_start();
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="fonts.css">
-	<link rel="stylesheet" type="text/css" href="style3.css">
 	<title>login</title>
-</head>
-<body >
-    <h1 >Welcome to <SPAN style="color:black">NATIONAL</SPAN><SPAN style="color:yellow">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1>
+    <h1 align="center">Welcome to <SPAN style="color:green">NATIONAL</SPAN><SPAN style="color:#89962B">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1>
 	<h2 align="center"> INGRESA TUS DATOS PARA INICIAR SESIÓN</h2>
+</head>
+<body bgcolor="5C5F46" align="center">
 		<form action="validar.php" method="post">
 
 		     <label for="caja1"><p>Usuario:</p></label> 
@@ -21,11 +19,16 @@ session_start();
 		   <p><input type="submit" name="Aceptar" value="iniciar sesion"></p> 
 			<br><br>
 		</form>
-    
-<p>Si no tienes una cuenta prueba <a href="registro.php">CREAR UNA CUENTA</a> </p>
-	 
-<p>o puedes volver a la <a href="index.php">PAGINA PRINCIPAL</a> </p>
+		<form action='registro.php'>
+            <p>Si no tienes una cuenta prueba</p>
+     <p><input type='submit' value='Crear Cuenta'></p> 
+    </form> 
+<form action='index.php'>
+    <p> O puedes volver a la </p>
+      <p><input type='submit' value='Pagina Principal'></p> 
+</form>
 
 	
 </body>
 </html>
+?>

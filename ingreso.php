@@ -1,25 +1,24 @@
 <?php
 session_start();
 $NOMBRE=$_POST['NOMBRE'];
-$CONTRASENA=$_POST['CONTRASENA'];
+$CONTRASEÑA=$_POST['CONTRASEÑA'];
+$md5 = md5($CONTRASEÑA);
 $CORREO=$_POST['CORREO'];
 
- $db = mysqli_connect("db.inf.uct.cl","rvallejos","rvallejos3038","rvallejos");
+ $db = mysqli_connect("localhost","root","", 'memes');
 
   if(!$db) echo "Error en conexion";
 
   $db->set_charset("utf8");
 
-  $resp = mysqli_query($db,
-  "INSERT INTO usuario(nombre_usuario, contrasena_usuario, correo_electronico)
-  VALUES ('".$NOMBRE."','".$CONTRASENA."','".$CORREO."')");
+  $resp = mysqli_query($db,"INSERT INTO usuario(nombre_usuario, contraseña_usuario, correo_electronico) VALUES ('".$NOMBRE."','".$md5."','".$CORREO."')");
   if (!$resp) {
     echo '<script>alert("ERROR DE REGISTRO")</script> ';
-   echo mysqli_error($db);
+    echo "<script>location.href='ingreso.html'</script>";
   }
   else {
     echo '<script>alert("USUARIO REGISTRADO")</script> ';
-      echo "<script>location.href='login.php'</script>";
+      echo "<script>location.href='index2.php'</script>";
 
   }
 ?>

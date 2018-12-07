@@ -10,21 +10,25 @@
 </head>
 <body>
 	<header>
-	 <p>NATIONALMEMEGRAPHICS-inf.uct.cl<p>	
+		NationalMemeGraphics/Universidad Catolica Temuco
 	</header>
 	<h1><SPAN style="color:black">NATIONAL</SPAN><SPAN style="color:yellow">MEME</SPAN><SPAN style="color:yellow">GRAPHICS</SPAN></h1> 
 	<nav>
 		<ul id="nav">
-			<a href="registro.php">REGISTRO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="login.php">LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="indexVid.php">VER VIDEOS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="index.php">VER IMAGENES</a>
+			<a id="salto" href="login.php">LOGIN</a>
+			<a id="salto" href="registro.php">REGISTRO</a>
+			<a id="salto" href="indexVid.php">VER VIDEOS</a>
+			<a id="salto" href="index.php">VER IMAGENES</a>
+			<form name="buscador" action="Search.php ">
+				<input type="text" name="Etiqueta">
+				<button type="submit">Search</button>
+			</form>
 		</ul>
 	</nav>
 	<span class="ir-arriba icon-circle-up"> ARRIBA </span>
 	<section class="contenido">
 	<?php
-		$conexion = mysqli_connect("db.inf.uct.cl","rvallejos","rvallejos3038","rvallejos");
+		$conexion = mysqli_connect("localhost","root","","memes");
 		if (mysqli_connect_errno()) {
 			echo "Fallo al conectar con BD";
 			exit();
@@ -33,28 +37,27 @@
 		$consult="SELECT * FROM imageness WHERE Tipo_M='video/webm' OR Tipo_M='video/mp4' OR Tipo_M='video/ogg'";
 		$result=mysqli_query($conexion, $consult);
 		while($fila=mysqli_fetch_array($result)){
-			$contenido=$fila['Contenido_M'];
 			$tipo=$fila['Tipo_M'];
 			$titulo=$fila['Titulo_M'];
 			if($tipo="video/webm"){
-				echo "$titulo<br>";
-	            echo "<video controls width='500' height='500'>
-    	    		<source src='data:video/webm; base64," . base64_encode($contenido) . " ' width='500' height='500' type='video/webm'/>
-				</video><br>";
+				echo "<div style='background-color:white;text-align:left;padding:1em;margin-left:9em;margin-right:27em;'>$titulo</div><br>";
+	            echo "<video controls width='700' height='500'>
+    	    		<source src='/NMG/uploads/".$titulo."' width='500' height='500' type='video/webm'/>
+					</video><br>";
 			}
 			else{
 				if($tipo="video/mp4"){
-					echo "$titulo<br>";
-	            	echo "<video controls width='500' height='500'>
-    	    			<source src='data:video/mp4; base64," . base64_encode($contenido) . " ' width='500' height='500' type='video/mp4'/>
+					echo "<div style='background-color:white;text-align:left;padding:1em;margin-left:9em;margin-right:27em;'>$titulo</div><br>";
+	            	echo "<video controls width='700' height='500'>
+    	    			<source src='/NMG/uploads/".$titulo."' width='500' height='500' type='video/mp4'/>
 						</video><br>";
 				}
 				else{
 					if($tipo="video/ogg"){
-					echo "$titulo<br>";
-	    	        echo "<video controls width='500' height='500'>
-    		    		<source src='data:video/ogg; base64," . base64_encode($contenido) . " ' width='500' height='500' type='video/ogg'/>
-						</video><br>";
+						echo "<div style='background-color:white;text-align:left;padding:1em;margin-left:9em;margin-right:27em;'>$titulo</div><br>";
+	    	        	echo "<video controls width='700' height='500'>
+    		    			<source src='/NMG/uploads/".$titulo."' width='500' height='500' type='video/ogg'/>
+							</video><br>";
 					}
 				}	
 			}

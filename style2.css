@@ -13,6 +13,10 @@ header{
 	color: black;
 	background-color: grey;
 }
+#salto{
+	padding-right: 9em;
+}
+
 h1{
 	font-size: 70px;
 	font-family: 'Bangers', cursive;
@@ -20,9 +24,9 @@ h1{
 body{
 	background: #FFFDFA;
 	text-align: center;
-	background-image: url("fondoindex.jpg");
+	background-image: url("http://4.bp.blogspot.com/-E5lHJC-kyd8/UcoqhSC_9uI/AAAAAAAAGnk/_rPvGtvHXoQ/s320/Fondo+HD+para+bajar+-+WiriWiri_info+-+(149).jpg");
 }
-img{
+img, video{
 	display: block;
 	margin: left;
 	padding-left: 150px;

@@ -20,8 +20,7 @@ session_start();
 			$_SESSION['id']=$f['id_usuario'];
 			$_SESSION['user']=$f['nombre_usuario'];
 
-			echo '<script>alert("BIENVENIDO "$username"")</script> ';
-			echo "<script>location.href='index2.php'</script>";
+			header("Location: index.php");
 		}else{
 			echo '<script>alert("CONTRASEÑA INCORRECTA")</script> ';
 		
